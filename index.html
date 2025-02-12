@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skibidi Toilet</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+        h1 {
+            font-size: 3em;
+            color: white;
+            background: linear-gradient(270deg, #ff0000, #ff7f00, #ffff00, #00ff00, #00ffff, #0000ff, #4b0082, #9400d3);
+            background-size: 400% 400%;
+            animation: rainbow 1.67s linear infinite; /* Faster animation */
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent; /* Make text transparent to show the gradient */
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            margin-top: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            margin: 10px;
+            font-size: 1.2em;
+            cursor: pointer;
+        }
+        @keyframes rainbow {
+            0% {
+                background-position: 0% 50%;
+            }
+            100% {
+                background-position: 100% 50%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Skibidi Toilet</h1>
+    <img id="gifImage" src="https://media.giphy.com/media/EwwHX78xRXN0o2ncPm/giphy.gif?cid=790b7611txvc6ndeapsgj67h55jisugkwbxda0fn64t6yec9&ep=v1_gifs_search&rid=giphy.gif&ct=g" alt="Skibidi Toilet GIF">
+
+    <h2>Are you a sigma?</h2>
+    <button onclick="changeGif('yes')">Yes</button>
+    <button onclick="changeGif('no')">No</button>
+
+    <script>
+        function changeGif(answer) {
+            const gifImage = document.getElementById('gifImage');
+            if (answer === 'yes') {
+                gifImage.src = 'https://media.giphy.com/media/UdDypeNWLse5GigvAY/giphy.gif?cid=790b7611bnlrcaenw9d6ndiwud9nappap3bt1diip9uq6znn&ep=v1_gifs_search&rid=giphy.gif&ct=g.gif'; // Replace with your "Yes" GIF link
+            } else {
+                gifImage.src = 'https://tenor.com/view/chae-won-chaewon-lesserafim-chaewon-mad-chaewon-punch-gif-11266370514348972976.gif'; // Replace with your "No" GIF link
+            }
+        }
+    </script>
+</body>
+</html>
